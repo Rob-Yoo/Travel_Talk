@@ -22,11 +22,12 @@ class ChattingListTableViewCell: UITableViewCell {
         self.configureDateLabel()
     }
     
-    func configureCellData(data: Chat) {
-        let image = UIImage(named: data.user.profileImage)
-        let name = data.user.rawValue
-        let recentMessage = data.message
-        let date = data.date.formatDate(inputDateFormat: "yyyy-MM-dd HH:mm", outputDateFormat: "yy.MM.dd")
+    func configureCellData(data: ChatRoom) {
+        let image = UIImage(named: data.chatroomImage.first!)
+        let name = data.chatroomName
+        let recentChat = data.recentChat
+        let recentMessage = recentChat?.message
+        let date = recentChat?.date.formatDate(inputDateFormat: "yyyy-MM-dd HH:mm", outputDateFormat: "yy.MM.dd")
         
         self.profileImageView.image = image
         self.nameLabel.text = name

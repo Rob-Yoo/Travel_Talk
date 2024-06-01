@@ -28,6 +28,9 @@ struct ChatRoom {
     let chatroomImage: [String] //채팅방에 속한 유저 이미지
     let chatroomName: String //채팅방 이름
     var chatList: [Chat] = [] //채팅 화면에서 사용할 데이터
+    var recentChat: Chat? {
+        return chatList.last
+    }
 }
 
 //채팅 화면에서 사용할 데이터 구조체
