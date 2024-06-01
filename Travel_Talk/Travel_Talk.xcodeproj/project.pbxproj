@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC1FC3B32C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FC3B22C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift */; };
 		CC5DC8C72C09F8EC005AB9E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DC8C62C09F8EC005AB9E1 /* AppDelegate.swift */; };
 		CC5DC8C92C09F8EC005AB9E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DC8C82C09F8EC005AB9E1 /* SceneDelegate.swift */; };
 		CC5DC8CB2C09F8EC005AB9E1 /* ChattingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DC8CA2C09F8EC005AB9E1 /* ChattingListViewController.swift */; };
@@ -14,13 +15,16 @@
 		CC5DC8D02C09F8ED005AB9E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5DC8CF2C09F8ED005AB9E1 /* Assets.xcassets */; };
 		CC5DC8D32C09F8ED005AB9E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CC5DC8D22C09F8ED005AB9E1 /* Base */; };
 		CC985BFF2C0AE0130009ED35 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC985BFE2C0AE0130009ED35 /* ChattingData.swift */; };
-		CC985C062C0AE1A40009ED35 /* ChattingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC985C042C0AE1A40009ED35 /* ChattingListTableViewCell.swift */; };
-		CC985C072C0AE1A40009ED35 /* ChattingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC985C052C0AE1A40009ED35 /* ChattingListTableViewCell.xib */; };
+		CC985C062C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC985C042C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift */; };
+		CC985C072C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC985C052C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib */; };
 		CC985C0A2C0AF0910009ED35 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC985C092C0AF0910009ED35 /* String+Extension.swift */; };
 		CCDCDFCA2C0AF3F50016FFD3 /* UITableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDFC92C0AF3F50016FFD3 /* UITableViewCellProtocol.swift */; };
+		CCDCDFCE2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCDFCC2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.swift */; };
+		CCDCDFCF2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDCDFCD2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC1FC3B22C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCellProtocol.swift; sourceTree = "<group>"; };
 		CC5DC8C32C09F8EC005AB9E1 /* Travel_Talk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel_Talk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5DC8C62C09F8EC005AB9E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5DC8C82C09F8EC005AB9E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,10 +34,12 @@
 		CC5DC8D22C09F8ED005AB9E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5DC8D42C09F8ED005AB9E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC985BFE2C0AE0130009ED35 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
-		CC985C042C0AE1A40009ED35 /* ChattingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListTableViewCell.swift; sourceTree = "<group>"; };
-		CC985C052C0AE1A40009ED35 /* ChattingListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingListTableViewCell.xib; sourceTree = "<group>"; };
+		CC985C042C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		CC985C052C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 		CC985C092C0AF0910009ED35 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		CCDCDFC92C0AF3F50016FFD3 /* UITableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellProtocol.swift; sourceTree = "<group>"; };
+		CCDCDFCC2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		CCDCDFCD2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,8 @@
 		CC985C012C0AE1790009ED35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCDCDFCB2C0B04A00016FFD3 /* ChatRoomTableViewCells */,
 				CC5DC8CC2C09F8EC005AB9E1 /* Main.storyboard */,
-				CC985C042C0AE1A40009ED35 /* ChattingListTableViewCell.swift */,
-				CC985C052C0AE1A40009ED35 /* ChattingListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,8 +123,20 @@
 			isa = PBXGroup;
 			children = (
 				CCDCDFC92C0AF3F50016FFD3 /* UITableViewCellProtocol.swift */,
+				CC1FC3B22C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		CCDCDFCB2C0B04A00016FFD3 /* ChatRoomTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				CC985C042C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift */,
+				CC985C052C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib */,
+				CCDCDFCC2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.swift */,
+				CCDCDFCD2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.xib */,
+			);
+			path = ChatRoomTableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5DC8D02C09F8ED005AB9E1 /* Assets.xcassets in Resources */,
+				CCDCDFCF2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.xib in Resources */,
 				CC5DC8D32C09F8ED005AB9E1 /* Base in Resources */,
 				CC5DC8CE2C09F8EC005AB9E1 /* Base in Resources */,
-				CC985C072C0AE1A40009ED35 /* ChattingListTableViewCell.xib in Resources */,
+				CC985C072C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,11 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDCDFCE2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.swift in Sources */,
 				CC5DC8CB2C09F8EC005AB9E1 /* ChattingListViewController.swift in Sources */,
 				CCDCDFCA2C0AF3F50016FFD3 /* UITableViewCellProtocol.swift in Sources */,
 				CC985BFF2C0AE0130009ED35 /* ChattingData.swift in Sources */,
 				CC5DC8C72C09F8EC005AB9E1 /* AppDelegate.swift in Sources */,
-				CC985C062C0AE1A40009ED35 /* ChattingListTableViewCell.swift in Sources */,
+				CC985C062C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift in Sources */,
+				CC1FC3B32C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift in Sources */,
 				CC985C0A2C0AF0910009ED35 /* String+Extension.swift in Sources */,
 				CC5DC8C92C09F8EC005AB9E1 /* SceneDelegate.swift in Sources */,
 			);

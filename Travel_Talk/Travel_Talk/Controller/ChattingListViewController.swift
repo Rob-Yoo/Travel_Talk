@@ -27,9 +27,12 @@ class ChattingListViewController: UIViewController {
     }
     
     private func setupTableView() {
-        let nib = UINib(nibName: ChattingListTableViewCell.reusableIdentifier, bundle: nil)
+        let pcrNib = UINib(nibName: PersonalChatRoomTableViewCell.reusableIdentifier, bundle: nil)
+        let gcrNib = UINib(nibName: GroupChatRoomTableViewCell.reusableIdentifier, bundle: nil)
         
-        self.chattingListTableView.register(nib, forCellReuseIdentifier: ChattingListTableViewCell.reusableIdentifier)
+        self.chattingListTableView.register(pcrNib, forCellReuseIdentifier: PersonalChatRoomTableViewCell.reusableIdentifier)
+        self.chattingListTableView.register(gcrNib, forCellReuseIdentifier: GroupChatRoomTableViewCell.reusableIdentifier)
+        
         self.chattingListTableView.delegate = self
         self.chattingListTableView.dataSource = self
         self.chattingListTableView.separatorStyle = .none
@@ -41,7 +44,7 @@ class ChattingListViewController: UIViewController {
 extension ChattingListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 95
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,13 +53,15 @@ extension ChattingListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chatRoom = self.searchResultChattingList[indexPath.row]
+        let reuseIdentifier = (chatRoom.chatroomImage.count == 1) ? PersonalChatRoomTableViewCell.reusableIdentifier : GroupChatRoomTableViewCell.reusableIdentifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         
-        guard let chattingListCell = tableView.dequeueReusableCell(withIdentifier: ChattingListTableViewCell.reusableIdentifier, for: indexPath) as? ChattingListTableViewCell else {
+        guard var chattingListCell = cell as? ChatRoomTableViewCellProtocol else {
             return UITableViewCell()
         }
         
-        chattingListCell.configureCellData(data: chatRoom)
-        return chattingListCell
+        chattingListCell.chatRoomInfo = chatRoom
+        return cell
     }
     
 }
