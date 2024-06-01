@@ -37,6 +37,7 @@ class ChattingListViewController: UIViewController {
     
 }
 
+// MARK: - UITableView Handling
 extension ChattingListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -60,6 +61,7 @@ extension ChattingListViewController: UITableViewDelegate, UITableViewDataSource
     
 }
 
+// MARK: - UISearchBar Handling
 extension ChattingListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let result = self.rawChattingList.filter {

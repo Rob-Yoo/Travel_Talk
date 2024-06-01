@@ -68,6 +68,7 @@ extension ChattingListTableViewCell {
     }
 }
 
+// MARK: - UITableViewCellProtocol Implementing
 extension ChattingListTableViewCell: UITableViewCellProtocol {
     static let reusableIdentifier = String(describing: ChattingListTableViewCell.self)
 }
