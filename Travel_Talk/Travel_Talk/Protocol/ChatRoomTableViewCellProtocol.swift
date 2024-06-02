@@ -53,11 +53,11 @@ extension ChatRoomTableViewCellProtocol {
         let recentMessage = recentChat?.message
         let date = recentChat?.date.formatDate(inputDateFormat: "yyyy-MM-dd HH:mm", outputDateFormat: "yy.MM.dd")
         
-        for (idx, imageView) in self.profileImageViews.enumerated() {
-            if (idx >= images.count) {
+        for (profileImageViewCount, imageView) in self.profileImageViews.enumerated() {
+            if (profileImageViewCount >= images.count) {
                 imageView.layer.borderColor = UIColor.clear.cgColor
             } else {
-                imageView.image = images[idx]
+                imageView.image = images[profileImageViewCount]
             }
         }
         
