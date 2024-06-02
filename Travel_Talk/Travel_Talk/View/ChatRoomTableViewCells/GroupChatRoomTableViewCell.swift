@@ -9,13 +9,13 @@ import UIKit
 
 class GroupChatRoomTableViewCell: UITableViewCell, ChatRoomTableViewCellProtocol {
 
-    @IBOutlet private var profileImageViews: [UIImageView]!
+    @IBOutlet var profileImageViews: [UIImageView]!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var recentMessageLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
     static var reusableIdentifier = String(describing: GroupChatRoomTableViewCell.self)
-    var chatRoomInfo: ChatRoom! {
+    var chatRoomInfo: ChatRoom = ChatRoom(chatroomId: 0, chatroomImage: [], chatroomName: "") {
         didSet {
             self.configureChatRoomCellData()
         }
@@ -24,35 +24,11 @@ class GroupChatRoomTableViewCell: UITableViewCell, ChatRoomTableViewCellProtocol
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.configureProfileImageViews()
+        let imageViewCornerRadius = (self.profileImageViews.first?.frame.width ?? 0) / 3
+
+        self.configureProfileImageViews(cornerRadius: imageViewCornerRadius)
         self.configureNameLabel()
         self.configureRecentMessageLabel()
         self.configureDateLabel()
-    }
-    
-    func configureChatRoomCellData() {
-        let images = self.chatRoomInfo.chatroomImage.map { UIImage(named: $0) }
-        let name = self.chatRoomInfo.chatroomName
-        let recentChat = self.chatRoomInfo.recentChat
-        let recentMessage = recentChat?.message
-        let date = recentChat?.date.formatDate(inputDateFormat: "yyyy-MM-dd HH:mm", outputDateFormat: "yy.MM.dd")
-        
-        for (idx, imageView) in self.profileImageViews.enumerated() {
-            if (idx >= images.count) {
-                imageView.layer.borderColor = UIColor.clear.cgColor
-            } else {
-                imageView.image = images[idx]
-            }
-        }
-        
-        self.nameLabel.text = name
-        self.recentMessageLabel.text = recentMessage
-        self.dateLabel.text = date
-    }
-    
-    private func configureProfileImageViews() {
-        let cornerRadius = self.profileImageViews.first!.frame.width / 3
-
-        self.profileImageViews.forEach { self.configureProfileImageView(imageView: $0, cornerRadius: cornerRadius) }
     }
 }

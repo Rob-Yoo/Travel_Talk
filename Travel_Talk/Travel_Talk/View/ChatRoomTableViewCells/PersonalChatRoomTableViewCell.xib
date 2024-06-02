@@ -75,8 +75,8 @@
             <connections>
                 <outlet property="dateLabel" destination="hQ3-7f-2VY" id="OPx-fb-NEd"/>
                 <outlet property="nameLabel" destination="5OK-iP-RzG" id="nrG-IN-Za4"/>
-                <outlet property="profileImageView" destination="U8V-sU-CDl" id="4rQ-eH-ugS"/>
                 <outlet property="recentMessageLabel" destination="Aro-Xu-RFH" id="Vqp-hG-O0X"/>
+                <outletCollection property="profileImageViews" destination="U8V-sU-CDl" collectionClass="NSMutableArray" id="nTp-3m-8cj"/>
             </connections>
             <point key="canvasLocation" x="96" y="-16"/>
         </tableViewCell>

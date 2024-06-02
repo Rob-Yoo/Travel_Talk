@@ -9,13 +9,13 @@ import UIKit
 
 class PersonalChatRoomTableViewCell: UITableViewCell, ChatRoomTableViewCellProtocol {
     
-    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var profileImageViews: [UIImageView]!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var recentMessageLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
     static let reusableIdentifier = String(describing: PersonalChatRoomTableViewCell.self)
-    var chatRoomInfo: ChatRoom! {
+    var chatRoomInfo: ChatRoom = ChatRoom(chatroomId: 0, chatroomImage: [], chatroomName: "") {
         didSet {
             self.configureChatRoomCellData()
         }
@@ -23,22 +23,12 @@ class PersonalChatRoomTableViewCell: UITableViewCell, ChatRoomTableViewCellProto
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configureProfileImageView(imageView: profileImageView, cornerRadius: self.profileImageView.frame.width / 2)
+        
+        let imageViewCornerRadius = (self.profileImageViews.first?.frame.width ?? 0) / 2
+
+        self.configureProfileImageViews(cornerRadius: imageViewCornerRadius)
         self.configureNameLabel()
         self.configureRecentMessageLabel()
         self.configureDateLabel()
-    }
-    
-    func configureChatRoomCellData() {
-        let image = UIImage(named: self.chatRoomInfo.chatroomImage.first!)
-        let name = self.chatRoomInfo?.chatroomName
-        let recentChat = self.chatRoomInfo?.recentChat
-        let recentMessage = recentChat?.message
-        let date = recentChat?.date.formatDate(inputDateFormat: "yyyy-MM-dd HH:mm", outputDateFormat: "yy.MM.dd")
-        
-        self.profileImageView.image = image
-        self.nameLabel.text = name
-        self.recentMessageLabel.text = recentMessage
-        self.dateLabel.text = date
     }
 }

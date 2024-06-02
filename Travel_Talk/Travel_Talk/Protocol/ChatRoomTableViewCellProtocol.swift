@@ -8,20 +8,23 @@
 import UIKit
 
 protocol ChatRoomTableViewCellProtocol: UITableViewCellProtocol {
+    var profileImageViews: [UIImageView]! { get set }
     var nameLabel: UILabel! { get set }
     var recentMessageLabel: UILabel! { get set }
     var dateLabel: UILabel! { get set }
-    var chatRoomInfo: ChatRoom! { get set }
+    var chatRoomInfo: ChatRoom { get set }
 }
 
 extension ChatRoomTableViewCellProtocol {
     
-    func configureProfileImageView(imageView: UIImageView, cornerRadius: CGFloat) {
-        imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = cornerRadius
-        imageView.clipsToBounds = true
-        imageView.layer.borderWidth = 0.3
-        imageView.layer.borderColor = UIColor.lightGray.cgColor
+    func configureProfileImageViews(cornerRadius: CGFloat) {
+        self.profileImageViews.forEach {
+            $0.contentMode = .scaleAspectFit
+            $0.layer.cornerRadius = cornerRadius
+            $0.clipsToBounds = true
+            $0.layer.borderWidth = 0.3
+            $0.layer.borderColor = UIColor.lightGray.cgColor
+        }
     }
 
     func configureNameLabel() {
@@ -41,5 +44,25 @@ extension ChatRoomTableViewCellProtocol {
     func configureDateLabel() {
         self.dateLabel.textColor = .lightGray
         self.dateLabel.font = .systemFont(ofSize: 11)
+    }
+    
+    func configureChatRoomCellData() {
+        let images = self.chatRoomInfo.chatroomImage.map { UIImage(named: $0) }
+        let name = self.chatRoomInfo.chatroomName
+        let recentChat = self.chatRoomInfo.recentChat
+        let recentMessage = recentChat?.message
+        let date = recentChat?.date.formatDate(inputDateFormat: "yyyy-MM-dd HH:mm", outputDateFormat: "yy.MM.dd")
+        
+        for (idx, imageView) in self.profileImageViews.enumerated() {
+            if (idx >= images.count) {
+                imageView.layer.borderColor = UIColor.clear.cgColor
+            } else {
+                imageView.image = images[idx]
+            }
+        }
+        
+        self.nameLabel.text = name
+        self.recentMessageLabel.text = recentMessage
+        self.dateLabel.text = date
     }
 }
