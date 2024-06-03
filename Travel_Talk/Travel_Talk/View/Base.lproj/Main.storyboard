@@ -59,27 +59,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DgS-IW-7y9">
-                                <rect key="frame" x="20" y="758" width="353" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCV-pw-rhS">
+                                <rect key="frame" x="20" y="727" width="353" height="51"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSt-ZP-T1o">
+                                        <rect key="frame" x="10" y="0.0" width="297" height="51"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYk-z4-5Ne">
+                                        <rect key="frame" x="307" y="5" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jYk-z4-5Ne" secondAttribute="height" multiplier="1:1" id="o2p-b2-pdJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274770000002" green="0.95686274770000002" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="zyJ-yP-gwC"/>
+                                    <constraint firstAttribute="trailing" secondItem="jYk-z4-5Ne" secondAttribute="trailing" constant="5" id="07I-Zj-xgr"/>
+                                    <constraint firstItem="NSt-ZP-T1o" firstAttribute="top" secondItem="yCV-pw-rhS" secondAttribute="top" id="5g9-OR-esD"/>
+                                    <constraint firstItem="jYk-z4-5Ne" firstAttribute="leading" secondItem="NSt-ZP-T1o" secondAttribute="trailing" id="NMG-IB-Q32"/>
+                                    <constraint firstItem="jYk-z4-5Ne" firstAttribute="top" secondItem="yCV-pw-rhS" secondAttribute="top" constant="5" id="Plx-P5-zEc"/>
+                                    <constraint firstItem="NSt-ZP-T1o" firstAttribute="leading" secondItem="yCV-pw-rhS" secondAttribute="leading" constant="10" id="S6g-b2-VkF"/>
+                                    <constraint firstAttribute="bottom" secondItem="jYk-z4-5Ne" secondAttribute="bottom" constant="5" id="nCn-eb-Eff"/>
+                                    <constraint firstAttribute="bottom" secondItem="NSt-ZP-T1o" secondAttribute="bottom" id="w3c-A4-XCY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tp7-tg-s1Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DgS-IW-7y9" firstAttribute="leading" secondItem="tp7-tg-s1Z" secondAttribute="leading" constant="20" id="IaV-oy-zwz"/>
-                            <constraint firstItem="tp7-tg-s1Z" firstAttribute="trailing" secondItem="DgS-IW-7y9" secondAttribute="trailing" constant="20" id="yM4-1E-LRP"/>
-                            <constraint firstItem="tp7-tg-s1Z" firstAttribute="bottom" secondItem="DgS-IW-7y9" secondAttribute="bottom" constant="20" id="yiJ-0e-Wfu"/>
+                            <constraint firstItem="tp7-tg-s1Z" firstAttribute="trailing" secondItem="yCV-pw-rhS" secondAttribute="trailing" constant="20" id="1wN-Vc-c43"/>
+                            <constraint firstItem="yCV-pw-rhS" firstAttribute="leading" secondItem="tp7-tg-s1Z" secondAttribute="leading" constant="20" id="FUa-Nr-DTY"/>
+                            <constraint firstItem="yCV-pw-rhS" firstAttribute="height" secondItem="ed9-Ft-wMR" secondAttribute="height" multiplier="0.06" id="S9W-EV-Bwg"/>
+                            <constraint firstItem="tp7-tg-s1Z" firstAttribute="bottom" secondItem="yCV-pw-rhS" secondAttribute="bottom" constant="40" id="cmu-fS-RQf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="NSt-ZP-T1o" id="sVh-fh-Anf"/>
+                        <outlet property="messageTextFieldContainerView" destination="yCV-pw-rhS" id="xim-EM-BW2"/>
+                        <outlet property="sendButton" destination="jYk-z4-5Ne" id="1Eq-VM-Dcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1o-AG-2NW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="-2"/>
+            <point key="canvasLocation" x="1867.9389312977098" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zAr-KQ-ULI">
@@ -104,6 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
