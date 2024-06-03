@@ -5,8 +5,14 @@
 //  Created by Jinyoung Yoo on 6/1/24.
 //
 
-import Foundation
+import UIKit
 
-protocol UITableViewCellProtocol {
+protocol ReusableProtocol {
     static var reusableIdentifier: String { get }
+}
+
+extension UITableViewCell: ReusableProtocol {
+    static var reusableIdentifier: String {
+        return String(describing: self)
+    }
 }

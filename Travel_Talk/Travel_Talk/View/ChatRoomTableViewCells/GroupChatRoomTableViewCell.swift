@@ -13,8 +13,7 @@ class GroupChatRoomTableViewCell: UITableViewCell, ChatRoomTableViewCellProtocol
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var recentMessageLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-    
-    static var reusableIdentifier = String(describing: GroupChatRoomTableViewCell.self)
+
     var chatRoomInfo: ChatRoom = ChatRoom(chatroomId: 0, chatroomImage: [], chatroomName: "") {
         didSet {
             self.configureChatRoomCellData()

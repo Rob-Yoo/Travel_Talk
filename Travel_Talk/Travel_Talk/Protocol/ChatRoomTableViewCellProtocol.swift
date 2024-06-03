@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ChatRoomTableViewCellProtocol: UITableViewCellProtocol {
+protocol ChatRoomTableViewCellProtocol {
     var profileImageViews: [UIImageView]! { get set }
     var nameLabel: UILabel! { get set }
     var recentMessageLabel: UILabel! { get set }
