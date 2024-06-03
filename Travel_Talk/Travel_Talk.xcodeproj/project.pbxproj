@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CC1FC3B32C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FC3B22C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift */; };
+		CC2AAD2E2C0E01C3004BD1D4 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2AAD2D2C0E01C3004BD1D4 /* ChattingViewController.swift */; };
+		CC2AAD312C0E0447004BD1D4 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CC2AAD302C0E0447004BD1D4 /* IQKeyboardManagerSwift */; };
 		CC5DC8C72C09F8EC005AB9E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DC8C62C09F8EC005AB9E1 /* AppDelegate.swift */; };
 		CC5DC8C92C09F8EC005AB9E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DC8C82C09F8EC005AB9E1 /* SceneDelegate.swift */; };
 		CC5DC8CB2C09F8EC005AB9E1 /* ChattingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DC8CA2C09F8EC005AB9E1 /* ChattingListViewController.swift */; };
@@ -25,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		CC1FC3B22C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCellProtocol.swift; sourceTree = "<group>"; };
+		CC2AAD2D2C0E01C3004BD1D4 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		CC5DC8C32C09F8EC005AB9E1 /* Travel_Talk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel_Talk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5DC8C62C09F8EC005AB9E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5DC8C82C09F8EC005AB9E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2AAD312C0E0447004BD1D4 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CC5DC8CA2C09F8EC005AB9E1 /* ChattingListViewController.swift */,
+				CC2AAD2D2C0E01C3004BD1D4 /* ChattingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +160,9 @@
 			dependencies = (
 			);
 			name = Travel_Talk;
+			packageProductDependencies = (
+				CC2AAD302C0E0447004BD1D4 /* IQKeyboardManagerSwift */,
+			);
 			productName = Travel_Talk;
 			productReference = CC5DC8C32C09F8EC005AB9E1 /* Travel_Talk.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +191,9 @@
 				Base,
 			);
 			mainGroup = CC5DC8BA2C09F8EC005AB9E1;
+			packageReferences = (
+				CC2AAD2F2C0E0447004BD1D4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = CC5DC8C42C09F8EC005AB9E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -218,6 +229,7 @@
 				CC985BFF2C0AE0130009ED35 /* ChattingData.swift in Sources */,
 				CC5DC8C72C09F8EC005AB9E1 /* AppDelegate.swift in Sources */,
 				CC985C062C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift in Sources */,
+				CC2AAD2E2C0E01C3004BD1D4 /* ChattingViewController.swift in Sources */,
 				CC1FC3B32C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift in Sources */,
 				CC985C0A2C0AF0910009ED35 /* String+Extension.swift in Sources */,
 				CC5DC8C92C09F8EC005AB9E1 /* SceneDelegate.swift in Sources */,
@@ -453,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC2AAD2F2C0E0447004BD1D4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC2AAD302C0E0447004BD1D4 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC2AAD2F2C0E0447004BD1D4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC5DC8BB2C09F8EC005AB9E1 /* Project object */;
 }
