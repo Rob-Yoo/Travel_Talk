@@ -11,7 +11,7 @@ extension String {
     static let inputFormatter = DateFormatter()
     static let outputFormatter = DateFormatter()
 
-    func formatDate(inputDateFormat: String, outputDateFormat: String) -> String? {
+    func formatDate(inputDateFormat: String, outputDateFormat: String, isKorean: Bool = false) -> String? {
         String.inputFormatter.dateFormat = inputDateFormat
         
         guard let dateString = String.inputFormatter.date(from: self) else {
@@ -19,6 +19,7 @@ extension String {
         }
         
         String.outputFormatter.dateFormat = outputDateFormat
+        if (isKorean) { String.outputFormatter.locale = Locale(identifier:"ko_KR") }
         return String.outputFormatter.string(from: dateString)
     }
 }

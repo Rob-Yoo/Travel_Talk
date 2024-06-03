@@ -64,6 +64,15 @@ extension ChattingListViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatRoom = self.searchResultChattingList[indexPath.row]
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: ChattingViewController.reusableIdentifier)
+        
+        guard let chattinngVC = vc as? ChattingViewController else { return }
+        chattinngVC.chatRoom = chatRoom
+
+        self.navigationController?.pushViewController(chattinngVC, animated: true)
+    }
 }
 
 // MARK: - UISearchBar Handling

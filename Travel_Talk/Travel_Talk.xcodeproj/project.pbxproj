@@ -16,6 +16,11 @@
 		CC5DC8CE2C09F8EC005AB9E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CC5DC8CD2C09F8EC005AB9E1 /* Base */; };
 		CC5DC8D02C09F8ED005AB9E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5DC8CF2C09F8ED005AB9E1 /* Assets.xcassets */; };
 		CC5DC8D32C09F8ED005AB9E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CC5DC8D22C09F8ED005AB9E1 /* Base */; };
+		CC90F0382C0E0A6A008E2F81 /* UserChattingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC90F0372C0E0A6A008E2F81 /* UserChattingTableViewCell.xib */; };
+		CC90F0392C0E0A6A008E2F81 /* UserChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC90F0362C0E0A6A008E2F81 /* UserChattingTableViewCell.swift */; };
+		CC90F03C2C0E0AB3008E2F81 /* OtherChattingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC90F03B2C0E0AB3008E2F81 /* OtherChattingTableViewCell.xib */; };
+		CC90F03D2C0E0AB3008E2F81 /* OtherChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC90F03A2C0E0AB3008E2F81 /* OtherChattingTableViewCell.swift */; };
+		CC90F03F2C0E18D9008E2F81 /* ChattingTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC90F03E2C0E18D9008E2F81 /* ChattingTableViewCellProtocol.swift */; };
 		CC985BFF2C0AE0130009ED35 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC985BFE2C0AE0130009ED35 /* ChattingData.swift */; };
 		CC985C062C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC985C042C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift */; };
 		CC985C072C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC985C052C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib */; };
@@ -36,6 +41,11 @@
 		CC5DC8CF2C09F8ED005AB9E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5DC8D22C09F8ED005AB9E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5DC8D42C09F8ED005AB9E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC90F0362C0E0A6A008E2F81 /* UserChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChattingTableViewCell.swift; sourceTree = "<group>"; };
+		CC90F0372C0E0A6A008E2F81 /* UserChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChattingTableViewCell.xib; sourceTree = "<group>"; };
+		CC90F03A2C0E0AB3008E2F81 /* OtherChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherChattingTableViewCell.swift; sourceTree = "<group>"; };
+		CC90F03B2C0E0AB3008E2F81 /* OtherChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherChattingTableViewCell.xib; sourceTree = "<group>"; };
+		CC90F03E2C0E18D9008E2F81 /* ChattingTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingTableViewCellProtocol.swift; sourceTree = "<group>"; };
 		CC985BFE2C0AE0130009ED35 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
 		CC985C042C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		CC985C052C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalChatRoomTableViewCell.xib; sourceTree = "<group>"; };
@@ -90,6 +100,17 @@
 			path = Travel_Talk;
 			sourceTree = "<group>";
 		};
+		CC90F0352C0E0A31008E2F81 /* ChattingTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				CC90F0362C0E0A6A008E2F81 /* UserChattingTableViewCell.swift */,
+				CC90F0372C0E0A6A008E2F81 /* UserChattingTableViewCell.xib */,
+				CC90F03A2C0E0AB3008E2F81 /* OtherChattingTableViewCell.swift */,
+				CC90F03B2C0E0AB3008E2F81 /* OtherChattingTableViewCell.xib */,
+			);
+			path = ChattingTableViewCells;
+			sourceTree = "<group>";
+		};
 		CC985BFD2C0ADFB40009ED35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +131,7 @@
 		CC985C012C0AE1790009ED35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC90F0352C0E0A31008E2F81 /* ChattingTableViewCells */,
 				CCDCDFCB2C0B04A00016FFD3 /* ChatRoomTableViewCells */,
 				CC5DC8CC2C09F8EC005AB9E1 /* Main.storyboard */,
 			);
@@ -129,6 +151,7 @@
 			children = (
 				CCDCDFC92C0AF3F50016FFD3 /* UITableViewCellProtocol.swift */,
 				CC1FC3B22C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift */,
+				CC90F03E2C0E18D9008E2F81 /* ChattingTableViewCellProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -210,8 +233,10 @@
 			files = (
 				CC5DC8D02C09F8ED005AB9E1 /* Assets.xcassets in Resources */,
 				CCDCDFCF2C0B04EA0016FFD3 /* GroupChatRoomTableViewCell.xib in Resources */,
+				CC90F03C2C0E0AB3008E2F81 /* OtherChattingTableViewCell.xib in Resources */,
 				CC5DC8D32C09F8ED005AB9E1 /* Base in Resources */,
 				CC5DC8CE2C09F8EC005AB9E1 /* Base in Resources */,
+				CC90F0382C0E0A6A008E2F81 /* UserChattingTableViewCell.xib in Resources */,
 				CC985C072C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,11 +252,14 @@
 				CC5DC8CB2C09F8EC005AB9E1 /* ChattingListViewController.swift in Sources */,
 				CCDCDFCA2C0AF3F50016FFD3 /* UITableViewCellProtocol.swift in Sources */,
 				CC985BFF2C0AE0130009ED35 /* ChattingData.swift in Sources */,
+				CC90F03D2C0E0AB3008E2F81 /* OtherChattingTableViewCell.swift in Sources */,
+				CC90F0392C0E0A6A008E2F81 /* UserChattingTableViewCell.swift in Sources */,
 				CC5DC8C72C09F8EC005AB9E1 /* AppDelegate.swift in Sources */,
 				CC985C062C0AE1A40009ED35 /* PersonalChatRoomTableViewCell.swift in Sources */,
 				CC2AAD2E2C0E01C3004BD1D4 /* ChattingViewController.swift in Sources */,
 				CC1FC3B32C0B19F0000A1C8A /* ChatRoomTableViewCellProtocol.swift in Sources */,
 				CC985C0A2C0AF0910009ED35 /* String+Extension.swift in Sources */,
+				CC90F03F2C0E18D9008E2F81 /* ChattingTableViewCellProtocol.swift in Sources */,
 				CC5DC8C92C09F8EC005AB9E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
